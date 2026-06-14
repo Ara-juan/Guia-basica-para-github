@@ -1,0 +1,174 @@
+/* --- Voy a poner notas para no olvidar las partes del css q afectan al html --- */
+:root {
+    --fondo-github: #0d1117;     /* Gris oscuro oficial de GitHub */
+    --tarjeta-github: #161b22;   /* Gris ligeramente más claro para cajas */
+    --texto-principal: #c9d1d9;  /* Blanco opaco/grisáceo muy legible */
+    --naranja-github: #f0883e;   /* Un naranja más balanceado y moderno */
+    --morado-titulo: #bc8cf2;    /* Morado vibrante moderno */
+    --borde-color: #30363d;      /* Líneas divisorias sutiles */
+}
+
+/* --- Estilos Generales de la Página --- */
+body {
+    background-color: var(--fondo-github) !important;
+    color: var(--texto-principal);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Contenedor principal estilo "tarjeta" */
+.tutorial-container {
+    background-color: var(--tarjeta-github);
+    border: 1px solid var(--borde-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Títulos --- */
+.titulo-principal {
+    color: var(--morado-titulo);
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo-seccion {
+    color: var(--morado-titulo);
+    font-weight: 700;
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--borde-color);
+    padding-bottom: 8px;
+}
+
+/* --- Textos y Listas --- */
+p, .paso-texto {
+    color: var(--texto-principal) !important;
+    font-size: 1.1rem;
+}
+
+.descripcion-intro {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Lista de viñetas superior */
+.lista-caracteristicas {
+    list-style-type: square;
+    padding-left: 24px;
+    color: var(--texto-principal);
+}
+
+.lista-caracteristicas li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+/* Lista principal ordenada (Pasos Grandes) */
+.lista-pasos {
+    padding-left: 20px;
+}
+
+.paso-item {
+    margin-bottom: 2rem;
+}
+
+/* Truquiño para que el número de la lista grande mantenga el color y tamaño del título */
+.paso-item::marker {
+    color: var(--naranja-github);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.paso-titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--naranja-github);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.paso-contenido {
+    padding-left: 10px;
+}
+
+/* Sublistas internas */
+.lista-subpasos {
+    color: var(--texto-principal);
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.lista-subpasos li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Código en línea como <code> */
+code {
+    background-color: rgba(110, 118, 129, 0.4);
+    color: #ff79c6;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 90%;
+}
+
+/* --- Elementos Visuales (Imágenes y Botones) --- */
+img.img-tutorial {
+    max-width: 100%;
+    max-width: 650px; /* Evita que en pantallas gigantes la captura explote */
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border: 1px solid var(--borde-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón personalizado naranja */
+.btn-outline-orange {
+    color: var(--naranja-github);
+    border-color: var(--naranja-github);
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-orange:hover {
+    background-color: var(--naranja-github);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(240, 136, 62, 0.4);
+}
+
+/* --- Separadores --- */
+.linea-decorativa {
+    background-color: var(--morado-titulo);
+    height: 4px;
+    width: 100px;
+    margin: 15px auto;
+    border-radius: 10px;
+    border: none;
+}
+
+.divisor-seccion {
+    background-color: var(--borde-color);
+    height: 2px;
+    margin: 40px 0;
+    border: none;
+}
+
+.divisor-paso {
+    background-color: rgba(48, 54, 61, 0.5);
+    height: 1px;
+    margin: 35px 0;
+    border: none;
+}
+
+/* --- Footer --- */
+.fin-del-tutorial {
+    color: var(--naranja-github);
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
